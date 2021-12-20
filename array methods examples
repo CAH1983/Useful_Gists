@@ -1,0 +1,9 @@
+FILTER
+function removeVowels(str) {
+    const vowels = 'aeiou';
+    let stringToArray = str.toLowerCase().split('');
+    return stringToArray.filter( val => vowels.indexOf(val) === -1).join('');
+
+}
+
+removeVowels('weekend')
