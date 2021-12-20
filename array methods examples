@@ -42,3 +42,19 @@ function bouncer(arr){
 }
 
 bouncer(vip);
+
+// capitalize first letter of each element of the array and lower case the rest
+const names = ["john", "JACOB", "jinGleHeimer", "schmidt"]
+
+function capitalizeNames(arr){
+  arr.map( function (value) {
+      let firstLetter = value.charAt(0).toUpperCase();
+      let remaining = value.slice(1).toLowerCase();
+      let full = firstLetter+remaining;
+      return full
+  }
+  )
+}
+
+capitalizeNames(names);
+console.log(names)
