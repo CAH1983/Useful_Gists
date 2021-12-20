@@ -1,4 +1,4 @@
-FILTER
+// FILTER
 function removeVowels(str) {
     const vowels = 'aeiou';
     let stringToArray = str.toLowerCase().split('');
@@ -7,3 +7,38 @@ function removeVowels(str) {
 }
 
 removeVowels('weekend')
+
+// MAP
+const vip = [
+
+    {
+        name: "Angelina Jolie",
+        age: 80
+    },
+    {
+        name: "Eric Jones",
+        age: 2
+    },
+    {
+        name: "Paris Hilton",
+        age: 5
+    },
+    {
+        name: "Kayne West",
+        age: 16
+    },
+    {
+        name: "Bob Ziroll",
+        age: 100
+    }
+
+]
+
+
+function bouncer(arr){
+  arr.map( 
+  elem => elem.age>18 ? console.log(`${elem.name} can go to the Matrix`) : console.log(`${elem.name} is under age`)
+  ) 
+}
+
+bouncer(vip);
