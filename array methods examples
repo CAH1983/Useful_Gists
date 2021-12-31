@@ -126,4 +126,17 @@ hasQuestionMark('What time is it?');
 console.log(`response 1 : ${allLowerCase('This Is the MatriX')}`);
 console.log(`response 2: ${allLowerCase('this is the matrix')}`);
 
+// check if a string contains only numbers
+function containsOnlyNumbers(str) {
+  var reg = /^\d+$/;
+
+  return str.split('').every(function(value) {
+    return reg.test(value)
+  })
+}
+
+containsOnlyNumbers('1115478900')
+
+
+
 
