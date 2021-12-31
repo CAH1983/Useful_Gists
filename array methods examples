@@ -58,3 +58,16 @@ function capitalizeNames(arr){
 
 capitalizeNames(names);
 console.log(names)
+
+// SOME
+// check if at least one element of the array contains the word "tintin" case non sensitive
+
+function containsTintin(arr) {
+  return arr.some(function(value) {
+    return value.toLowerCase().includes('tintin');
+  })
+}
+
+containsTintin(['popo', 'madonna', 'TinTin', 'Zinedine']);
+containsTintin(['Minnie Mouse', 'Donald', 'Melania'])
+
