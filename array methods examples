@@ -87,7 +87,7 @@ function capitalizeNames(arr){
 capitalizeNames(names);
 console.log(names)
 
-// SOME________________________
+// SOME ________________________
 // check if at least one element of the array contains the word "tintin" case non sensitive
 
 function containsTintin(arr) {
@@ -107,3 +107,11 @@ function hasQuestionMark(str) {
 }
 
 hasQuestionMark('What time is it?');
+
+// EVERY ________________________
+// check if every element of the array contains the string "REF", returns true or false
+ var arr = ['REF01', 'REF0021', 'REF7', 'REF005'];
+
+ arr.every( function(value, index, array) {
+   return value.includes('REF');
+ })
