@@ -115,3 +115,15 @@ hasQuestionMark('What time is it?');
  arr.every( function(value, index, array) {
    return value.includes('REF');
  })
+ 
+ // check if a characters in a string are all lowercase
+ function allLowerCase(str) {
+  return str.split('').every(function(value) {
+    return value === value.toLowerCase();
+  })
+}
+
+console.log(`response 1 : ${allLowerCase('This Is the MatriX')}`);
+console.log(`response 2: ${allLowerCase('this is the matrix')}`);
+
+
