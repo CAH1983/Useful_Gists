@@ -137,6 +137,17 @@ function containsOnlyNumbers(str) {
 
 containsOnlyNumbers('1115478900')
 
+// REDUCE ________________________
+// calculate all the prices in the array minus a discount
+const prices = [12, 25, 38, 4, 85];
+const discount = -15;
+
+const total = prices.reduce( function(acc, nextVal) {
+  return acc + nextVal;
+}, discount)
+
+console.log(`you pay: £${total}`)
+
 
 
 
