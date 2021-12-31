@@ -1,4 +1,4 @@
-// FILTER
+// FILTER _____________________
 function removeVowels(str) {
     const vowels = 'aeiou';
     let stringToArray = str.toLowerCase().split('');
@@ -8,7 +8,22 @@ function removeVowels(str) {
 
 removeVowels('weekend')
 
-// MAP
+// real life example, finding employee which email address is xyz, if not found return an empty string
+//function to get user cost centre
+function getADDetailsByEmail(email) {
+  var emptyString = "";
+  try {
+    return employeesJSON2.filter(function (employeesJSON2) {
+      return employeesJSON2.EMAILADDRESS == email.toLowerCase();
+    });
+  } catch (error) {
+    console.log(error);
+    return emptyString;
+  }
+}
+
+
+// MAP _____________________
 const vip = [
 
     {
@@ -43,6 +58,19 @@ function bouncer(arr){
 
 bouncer(vip);
 
+// REAL life example
+// converting all email address key value to lowercase so we can compare them against lowercased email adresses 
+  // converting all email addresses to lowercase for comparison later on
+  
+  employeesJSON2 = employeesJSON2.map(function (elem) {
+    try {
+      elem.EMAILADDRESS = elem.EMAILADDRESS.toLowerCase();
+    } catch (error) {
+      console.log(error);
+    }
+    return elem;
+  });
+
 // capitalize first letter of each element of the array and lower case the rest
 const names = ["john", "JACOB", "jinGleHeimer", "schmidt"]
 
@@ -59,7 +87,7 @@ function capitalizeNames(arr){
 capitalizeNames(names);
 console.log(names)
 
-// SOME
+// SOME________________________
 // check if at least one element of the array contains the word "tintin" case non sensitive
 
 function containsTintin(arr) {
@@ -71,3 +99,11 @@ function containsTintin(arr) {
 containsTintin(['popo', 'madonna', 'TinTin', 'Zinedine']);
 containsTintin(['Minnie Mouse', 'Donald', 'Melania'])
 
+// check if a string contains a "?"
+function hasQuestionMark(str) {
+  return str.split('').some(function(value) {
+    return value === '?';
+  })
+}
+
+hasQuestionMark('What time is it?');
