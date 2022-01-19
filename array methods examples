@@ -148,6 +148,20 @@ const total = prices.reduce( function(acc, nextVal) {
 
 console.log(`you pay: £${total}`)
 
+// return highest number of an array
+const arr = [5, 100, 255, 3, 9, 8];
+
+const returnMax = function (maxi, current) {
+  if (current > maxi) {
+    maxi = current;
+  }
+  return maxi;
+};
+
+const output = arr.reduce(returnMax, 0);
+
+console.log(output);
+
 
 
 
